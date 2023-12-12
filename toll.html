@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toll Calculator</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link href="toll.css" rel="stylesheet">
+
+</head>
+<body>
+
+<div class="container">
+  <h1 class="text-center">Toll Calculator</h1>
+
+  <form id="tollForm">
+    <div class="mb-3">
+      <label for="vehicleType" class="form-label">Select Vehicle Type:</label>
+      <select class="form-select" id="vehicleType" required>
+        <option value="car">Car</option>
+        <option value="truck">Truck</option>
+        <option value="motorcycle">Motorcycle</option>
+        <option value="motorcycle">Bus</option>
+        
+      </select>
+    </div>
+
+    <div class="mb-3">
+      <label for="distance" class="form-label">Enter Distance (in miles):</label>
+      <input type="number" class="form-control" id="distance" required>
+    </div>
+
+    <button type="button" class="btn btn-primary" onclick="calculateToll()">Calculate Toll</button>
+  </form>
+
+  <div id="result" class="mt-3"></div>
+</div>
+<!-- Bootstrap JS and Popper.js (required for Bootstrap JavaScript components) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Custom JavaScript -->
+<script src="toll.js"></script>
+</body>
+</html>
